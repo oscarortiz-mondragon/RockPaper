@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1, h2{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#competeBox{
+    margin-top:50px ;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.human{
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: solid red 10px ;
+
+}
+.bot{
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: solid red 10px;
+}
+.bot, .human{
+    margin: 10px;
+    width: 10%;
+}
+.button{
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
