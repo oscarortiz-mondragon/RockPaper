@@ -28,16 +28,36 @@ const bot = document.getElementsByClassName("bot")[0]; //div
 
 function botChoice (){ 
 let bChoice = bot.getElementsByClassName("botSide")[0]; //p
-if(bChoice.textContent === "" || "paper" || "rock" || "scissors"){
+if(bChoice.textContent ===  "paper" || "rock" || "scissors"){
     bChoice.textContent = choices[Math.floor(Math.random() * choices.length)].toUpperCase();
 }};
 
+const winner = document.querySelector("h3")
+// Winner
+function getWinner(){
+    let bChoice = bot.getElementsByClassName("botSide")[0];
+    if(human.textContent == "ROCK" && bChoice.textContent == "PAPER"){
+winner.textContent = "YOU LOSE, Paper covers Rock!"}
+    else if(human.textContent=="PAPER" && bChoice.textContent == "SCISSORS"){
+winner.textContent = "You LOSE, Scissors cuts Paper!"
+    }
+    else if(human.textContent == "SCISSORS" && bChoice.textContent == "ROCK"){
+        winner.textContent = "YOU LOSE, Rock breaks Scissors!"
+    }
+    else if (human.textContent == bChoice.textContent){
+        winner.textContent = "DRAW, PLAY AGAIN!"
+    }
+    else{
+        winner.textContent = "YOU'RE A BIG WINNER!"
+    }
+};
 
 // button function to add onto page
 const button = document.querySelector('input');
 button.onclick = function (){
 getChoice();
 botChoice();
+getWinner();
 };
 
 
